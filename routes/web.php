@@ -27,6 +27,8 @@ Route::post('postform', [FormController::class, 'postForm'])->name('post.form');
 
 Route::get('querybuilder', [FormController::class, 'queryBuilder']);
 
+Route::get('/users', [HomeController::class, 'getUsers']);
+
 
 Route::get('/request', function(Request $request){
     return view('form.request', ['request' => $request]);
